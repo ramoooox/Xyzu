@@ -1,0 +1,92 @@
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleThemeChange = () => {
+    setDarkMode(!darkMode);
+  };
+
+  return (
+    <div className={h-screen w-screen ${darkMode ? 'bg-black' : 'bg-white'}}>
+      <div className="flex flex-col items-center justify-center pt-20">
+        <img
+          src="https://digifycdn.com/media/item_images/IMG_20241003_235247_765.jpg?x-img=v1/optimize,q_95/resize,h_500,w_500,force_true"
+          alt="Logo"
+          className="h-40 w-40 rounded-full"
+        />
+        <h1 className={text-4xl font-bold ${darkMode ? 'text-white' : 'text-black'} mt-10}>
+          Community Rogue
+        </h1>
+        <p className={text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'} mt-5}>
+          RougeTeam
+        </p>
+        <div className="flex flex-col items-center justify-center mt-10">
+          <a
+            href="https://t.me/Rogue_Team"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={bg-${darkMode ? 'white' : 'black'} hover:bg-${darkMode ? 'gray-200' : 'gray-700'} text-${darkMode ? 'black' : 'white'} font-bold py-2 px-4 rounded-full w-64 mb-5 flex justify-between items-center}
+          >
+            <span>Rogue Team</span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
+              alt="Telegram Logo"
+              className="h-6 w-6 ml-2"
+            />
+          </a>
+          <a
+            href="https://t.me/Rogue_Middle"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={bg-${darkMode ? 'white' : 'black'} hover:bg-${darkMode ? 'gray-200' : 'gray-700'} text-${darkMode ? 'black' : 'white'} font-bold py-2 px-4 rounded-full w-64 mb-5 flex justify-between items-center}
+          >
+            <span>Middle Rogue</span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
+              alt="Telegram Logo"
+              className="h-6 w-6 ml-2"
+            />
+          </a>
+          <a
+            href="https://t.me/RogueCollection"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={bg-${darkMode ? 'white' : 'black'} hover:bg-${darkMode ? 'gray-200' : 'gray-700'} text-${darkMode ? 'black' : 'white'} font-bold py-2 px-4 rounded-full w-64 mb-5 flex justify-between items-center}
+          >
+            <span>Rogue Collection</span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
+              alt="Telegram Logo"
+              className="h-6 w-6 ml-2"
+            />
+          </a>
+          <a
+            href="https://t.me/Rogue_Learn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={bg-${darkMode ? 'white' : 'black'} hover:bg-${darkMode ? 'gray-200' : 'gray-700'} text-${darkMode ? 'black' : 'white'} font-bold py-2 px-4 rounded-full w-64 mb-5 flex justify-between items-center}
+          >
+            <span>Rogue Learn</span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
+              alt="Telegram Logo"
+              className="h-6 w-6 ml-2"
+            />
+          </a>
+        </div>
+      </div>
+      <div className="absolute bottom-5 left-5">
+        {darkMode ? (
+          <button
+            className="bg-white rounded-full h-8 w-8"
+            onClick={handleThemeChange}
+          />
+        ) : (
+          <button
+            className="bg-black rounded-full h-8 w-8"
+            onClick={handleThemeChange}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
